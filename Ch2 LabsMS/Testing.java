@@ -47,6 +47,6 @@ public class Testing {
        System.out.println(batAvg);
        */
       
-      // asfad
+      
     }
 }
