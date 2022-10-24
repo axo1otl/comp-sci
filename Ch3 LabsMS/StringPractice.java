@@ -2,7 +2,7 @@
 // September 23, 2022
 // Objective: String Mutation
 
-public class StringLab{
+public class StringPractice{
     public static void main(String[] args){
         String firstName = "Matt";
         String middleName = "Nora";

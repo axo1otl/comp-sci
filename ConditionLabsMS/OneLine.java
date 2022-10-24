@@ -1,0 +1,1 @@
+public class OneLine{public static void main(String[] args){boolean a,b;a = false;b = false;System.out.println();System.out.println(!(b||a)||a);System.out.println(a||b&&!a);}}
