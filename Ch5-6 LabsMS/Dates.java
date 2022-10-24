@@ -5,7 +5,8 @@ public class Dates{
         Scanner scan = new Scanner(System.in);
         int month, day, year; //date read in from user
         int daysInMonth;
-        boolean monthValid, dayValid, yearValid, leapYear;
+        boolean monthValid, dayValid, yearValid;
+        boolean leapYear;
         
         //Get integer month, day, and year from user
         System.out.print("Enter Month: ");
@@ -16,36 +17,14 @@ public class Dates{
         year = scan.nextInt();
         
         //Check to see if month is valid
-        if (month > 0 && month <= 12){
-            monthValid = true;
-        }
-        else{
-            monthValid = false;
-        }
+        monthValid = month > 0 && month <= 12;
+        
         //Check to see if year is valid
-        if (year >= 1000 && year <= 1999){
-            yearValid = true;
-        }
-        else{
-            yearValid = false;
-        }
+        yearValid = year >= 1000 && year <= 1999;
+        
         //Determine whether it's a leap year
-        if (year%4 == 0){
-            if (year%100 == 0){
-                if (year%400 == 0){
-                    leapYear = true;
-                }
-                else{
-                    leapYear = false;
-                }
-            }
-            else{
-                leapYear = true;
-            }
-        }
-        else{
-            leapYear = false;
-        }
+        leapYear = ((year%4 == 0 && year%100 == 0 && year%400 == 0)||(year%4 == 0 && !(year%100 == 0)));
+
         //Determine number of days in month
         if (month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12){
             daysInMonth = 31;
@@ -72,6 +51,9 @@ public class Dates{
             System.out.println("Date is valid");
             if (leapYear == true){
                 System.out.println("It is a leap year!");
+            }
+            else{
+                System.out.println("It is not a leap year");
             }
         }
         else{
