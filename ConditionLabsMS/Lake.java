@@ -20,11 +20,10 @@ public class Lake{
         else if (temp < 40){
             System.out.println("Try skiing!");
         }
-        
-        if (temp > 95){
-            System.out.println("Visit our shops!");
+        else{
+            System.out.println("error");
         }
-        if (temp <= 20){
+        if (temp > 95 || temp <= 20){
             System.out.println("Visit our shops!");
         }
     }
