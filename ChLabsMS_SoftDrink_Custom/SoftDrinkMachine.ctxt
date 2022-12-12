@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=SoftDrinkMachine
+comment1.params=
+comment1.target=void\ getTemp()
+comment2.params=
+comment2.target=void\ tellPrice()
+comment3.params=
+comment3.target=void\ getMoney()
+comment4.params=
+comment4.target=void\ giveChange()
+comment5.params=
+comment5.target=void\ giveChangeOrNoSale()
+numComments=6
