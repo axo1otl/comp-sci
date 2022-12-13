@@ -1,3 +1,11 @@
 #BlueJ class context
 comment0.target=BandBooster
-numComments=1
+comment1.params=studentName
+comment1.target=BandBooster(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=newSales
+comment3.target=void\ updateTotal(int)
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

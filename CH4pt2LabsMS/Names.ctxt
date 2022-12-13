@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Names
+comment1.params=fN\ mN\ lN
+comment1.target=Names(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getFirst()
+comment3.params=
+comment3.target=java.lang.String\ getMiddle()
+comment4.params=
+comment4.target=java.lang.String\ getLast()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+numComments=6
