@@ -59,14 +59,19 @@ public class DigiWallet{
                 // if no then from what card 1 2 or 3
                 //   choice -> active
                 System.out.println("[ ] Withdraw from where?");
-                System.out.print("[?] 0 - pocket / 1,2,3 - card : ");
+                System.out.println();
+                System.out.println("[P] 0 - Pocket: " + currency.format(pocket));
+                System.out.println("[C] 1 - Card 1: " + currency.format(card1));
+                System.out.println("[C] 2 - Card 2: " + currency.format(card2));
+                System.out.println("[C] 3 - Card 3: " + currency.format(card3));
+                System.out.println("[X] 9 - quit");
                 active = scan.nextInt();
 
                 // if card balance < 0, call fix method
                 if (active == 0){
                     if (amount > pocket){ // overflow control
                         System.out.println("[!] WARNING: Pocket does not have" + currency.format(amount));
-                        System.out.println("[!]        : Please try again.");
+                        System.out.println("[!]        : Please try again or cancel.");
                     }
                     else{
                         pocket -= amount;
@@ -107,13 +112,21 @@ public class DigiWallet{
                         exit = false;
                     }
                 }
+                if (active == 9){
+                    exit = false;
+                }
             }
         }
     }
     
     public void deposit(int amount){
         System.out.println("[ ] Deposit to where?");
-        System.out.print("[?] 0 - pocket / 1,2,3 - card : ");
+        System.out.println();
+        System.out.println("[P] 0 - Pocket: " + currency.format(pocket));
+        System.out.println("[C] 1 - Card 1: " + currency.format(card1));
+        System.out.println("[C] 2 - Card 2: " + currency.format(card2));
+        System.out.println("[C] 3 - Card 3: " + currency.format(card3));
+        System.out.println("[X] 9 - quit");
         active = scan.nextInt();
 
         if (active == 0){
@@ -131,6 +144,9 @@ public class DigiWallet{
         if (active == 3){
             card3 += amount;
             System.out.println("Successfully deposited " + currency.format(amount) + " to Card 3!");
+        }
+        if (active == 9){
+            // nothing
         }
     }
 
@@ -185,7 +201,7 @@ public class DigiWallet{
         fName = scan.next();
 
         System.out.print("[?] Enter your last name: ");
-        lName = scan.next();
+        lName = scan.nextLine();
 
         name = fName + " " + lName;
     }
@@ -227,5 +243,8 @@ public class DigiWallet{
         System.out.println("Card 1: " + currency.format(card1));
         System.out.println("Card 2: " + currency.format(card2));
         System.out.println("Card 3: " + currency.format(card3));
+        System.out.println("");
+        System.out.println("");
+        System.out.println("ID: " + accountID);
     }
 }

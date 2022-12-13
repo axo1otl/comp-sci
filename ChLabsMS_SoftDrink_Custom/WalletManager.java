@@ -7,8 +7,10 @@ public class WalletManager{
         NumberFormat currency = NumberFormat.getCurrencyInstance(); // new number format as 0.00
         
         int input = 0;
+        boolean exit = true;
 
         DigiWallet digiW1 = new DigiWallet();
+        DigiWallet digiW2 = new DigiWallet();
         
         System.out.println("Welcome to DigiWalletTM!");
         System.out.println();
@@ -43,6 +45,61 @@ public class WalletManager{
         digiW1.setID(000001);
         digiW1.setBalance();
 
-        digiW1.home();
+        while(exit){
+            digiW1.home();
+            System.out.println();
+            System.out.println("What would you like to do?");
+            System.out.println();
+            System.out.println("[+] 1 - deposit");
+            System.out.println("[-] 2 - withdraw");
+            System.out.println("[>] 3 - transfer");
+            System.out.println("[?] 4 - change account info");
+            System.out.println("[X] 0 - quit");
+            input = scan.nextInt();
+
+            if (input == 1){
+                System.out.print("[?] Amount to deposit: ");
+                System.out.println();
+                input = scan.nextInt();
+                digiW1.deposit(input);
+            }
+            if (input == 2){
+                System.out.print("[?] Amount to withdraw: ");
+                System.out.println();
+                input = scan.nextInt();
+                digiW1.withdraw(input);
+            }
+            if (input == 3){
+                System.out.print("[?] Amount to transfer: ");
+                System.out.println();
+                input = scan.nextInt();
+                digiW1.withdraw(input);
+                digiW1.deposit(input);
+            }
+            if (input == 4){
+                System.out.println();
+                System.out.println("What would you like to change");
+                System.out.println();
+                System.out.println("[N] 1 - Name");
+                System.out.println("[/] 2 - Date of Birth");
+                System.out.println("[X] 0 - quit");
+                input = scan.nextInt();
+
+                if (input == 1){
+                    digiW1.setName();
+                }
+                if (input == 2){
+                    digiW1.setBirthDate();
+                }
+                if (input == 0){
+                    // Nothing (quiting)
+                }
+            }
+            if (input == 0){
+                exit = false;
+            }
+            System.out.println("\n\n");
+            digiW1.setBalance();
+        }
     }
 }
