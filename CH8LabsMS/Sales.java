@@ -3,8 +3,10 @@ import java.util.Scanner;
 public class Sales{
     public static void main(String[] args){
         Scanner scan = new Scanner(System.in);
+        System.out.println("How many sales people?");
+        System.out.print("int: ");
 
-        final int SALESPEOPLE = 5;
+        int SALESPEOPLE = Math.abs(scan.nextInt());
         int[] sales = new int[SALESPEOPLE];
         int sum;
         double avg;
@@ -37,11 +39,22 @@ public class Sales{
                 lowest = i+1;
             }
         }
-        avg = sum / 5;
+        avg = sum / SALESPEOPLE;
 
         System.out.println("\nTotal sales: " + sum);
         System.out.println("Average sales: " + avg);
         System.out.println("\nSalesperson " + highest + " had the highest sale with $" + highestSales);
         System.out.println("Salesperson " + lowest + " had the lowest sale with $" + lowestSales);
+        
+        System.out.println();
+        System.out.println("Enter a value to find every salesperson who exceeded that value");
+        System.out.print("int: ");
+        int sift = scan.nextInt();
+        
+        for (int i = 0; i < sales.length; i++){
+            if (sales[i] >= sift){
+                System.out.println("Salesperson " + (i+1) + " had $" + sales[i]);
+            }
+        }
     }
 }
