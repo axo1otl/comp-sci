@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Balloon1B
+comment1.params=
+comment1.target=Balloon1B()
+comment2.params=c\ r\ n
+comment2.target=Balloon1B(java.lang.String,\ int,\ java.lang.String)
+comment3.params=
+comment3.target=void\ myColor()
+comment4.params=
+comment4.target=void\ deflate()
+comment5.params=
+comment5.target=void\ myName()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

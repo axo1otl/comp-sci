@@ -20,35 +20,41 @@ public class APExam{
      */
     public APExam(String subject, int score){
         // initialise instance variables
-       
+        mySubject = subject;
+        myScore = score;
     }
 
     /**
      * sets an AP test subject
      */
     public void setSubject(String newSub){
-      
+        mySubject = newSub;
     }
 
     /**
      * sets an AP test score
      */
     public void setScore(int newScore){
-       
+        if (newScore > 5 || newScore < 1){
+            System.out.println("Please enter a valid score.");
+        }
+        else{
+            myScore = newScore;
+        }
     }
 
     /**
      * returns the AP test subject
      */
     public String getSubject(){
-       
+       return(mySubject);
     }
 
     /**
      * returns the AP test score
      */
     public int getScore(){
-        
+        return(myScore);
     }
 
     /**
@@ -69,7 +75,7 @@ public class APExam{
      * Prints APExam Data
      */
     public String toString(){
-        
+        return("Score: " + myScore + " Subject: " + mySubject);
     }
 }
 
