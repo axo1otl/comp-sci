@@ -25,14 +25,15 @@ public class Account
   //----------------------------------------------
   public void withdraw(double amount)
   {
-    if (balance >= amount)
+    if (balance >= amount){
        balance -= amount;
 
        withdraw++;              // add the number of withdrawals per day
        totalWithdraw += amount; // add to the amount of cash withdrawn per day
-    else
+    }
+    else{
        System.out.println("Insufficient funds");
-
+    }
   }
 
   //----------------------------------------------
@@ -41,8 +42,42 @@ public class Account
   public void deposit(double amount)
   {
     balance += amount;
-    deposit++;
-    totalDeposit++;
+    deposit++;              // add the number of deposits per day
+    totalDeposit += amount; // add to the amount of cash deposited per day
+  }
+
+  //----------------------------------------------
+  // Return the 4 static variables.
+  //----------------------------------------------
+  public static int getNumDeposit()
+  {
+    return(deposit);
+  }
+
+  public static int getNumWithdraw()
+  {
+    return(withdraw);
+  }
+
+  public static double getAmountDeposit()
+  {
+    return(totalDeposit);
+  }
+
+  public static double getAmountWithdraw()
+  {
+    return(totalWithdraw);
+  }
+
+  //----------------------------------------------
+  // Clear statistics for the day.
+  //----------------------------------------------
+  public void resetStats()
+  {
+    deposit = 0;
+    withdraw = 0;
+    totalDeposit = 0;
+    totalWithdraw = 0;
   }
 
   //----------------------------------------------
