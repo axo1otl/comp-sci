@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=IntegerList
+comment0.text=\r\n\ create\ an\ integer\ list\ class\ that\ randomly\ generates\ an\ array\ of\ numbers\r\n\ \ \r\n
+comment1.params=size
+comment1.target=IntegerList(int)
+comment2.params=
+comment2.target=void\ randomize()
+comment3.params=
+comment3.target=void\ print()
+comment4.params=target
+comment4.target=int\ linearSearch(int)
+numComments=5

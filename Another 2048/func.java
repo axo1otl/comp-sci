@@ -16,7 +16,7 @@ public class func{
     public void print(double _double){System.out.print(_double);}
     public void print(String _string){System.out.print(_string);}
     public void print(boolean _boolean){System.out.print(_boolean);}
-    
+
     public void println(){System.out.println();}
     public void println(int _int){System.out.println(_int);}
     public void println(byte _byte){System.out.println(_byte);}

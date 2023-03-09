@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=IntegerList
+comment1.params=size
+comment1.target=IntegerList(int)
+comment2.params=
+comment2.target=void\ randomize()
+comment3.params=
+comment3.target=void\ print()
+comment4.params=
+comment4.target=void\ sort()
+comment5.params=target
+comment5.target=int\ binarySearch(int)
+numComments=6
